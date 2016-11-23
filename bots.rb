@@ -1,5 +1,8 @@
 # This is an example bot definition with event handlers commented out
 # You can define and instantiate as many bots as you like
+require 'dotenv'  
+Dotenv.load(".env")
+
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   def configure
