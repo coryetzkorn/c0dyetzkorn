@@ -3,9 +3,6 @@
 require 'dotenv'  
 Dotenv.load(".env")
 
-puts '---- test -----'
-puts ENV['TWITTER_ACCESS_TOKEN_SECRET']
-
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   def configure
