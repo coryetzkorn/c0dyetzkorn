@@ -9,12 +9,6 @@ class MyBot < Ebooks::Bot
     # Once you have consumer details, use "ebooks auth" for new access tokens
     self.consumer_key = ENV['TWITTER_CONSUMER_KEY'] # Your app consumer key
     self.consumer_secret = ENV['TWITTER_CONSUMER_SECRET'] # Your app consumer secret
-
-    # Users to block instead of interacting with
-    self.blacklist = []
-
-    # Range in seconds to randomize delay when bot.delay is called
-    self.delay_range = 1..6
   end
 
   def on_startup

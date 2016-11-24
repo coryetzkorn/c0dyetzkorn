@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
-ruby '2.2.0'
+ruby '2.3.0'
 
 gem 'twitter_ebooks'
 gem 'rake'
-gem 'dotenv', :groups => [:development]
