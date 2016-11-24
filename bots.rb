@@ -13,15 +13,12 @@ class MyBot < Ebooks::Bot
 
   def on_startup
     @model ||= Ebooks::Model.load('model/coryetzkorn.model')
-    scheduler.every '5s' do
-      tweet(@model.make_statement)
+    # 80% chance to tweet every 6 hours
+    scheduler.every '6h' do
+      if rand <= 0.8
+        tweet(@model.make_statement)
+      end
     end
-    # # 80% chance to tweet every 2 hours
-    # bot.scheduler.every '2h' do
-    #   if rand <= 0.8
-    #     bot.tweet @model.make_statement
-    #   end
-    # end
   end
 
 end
