@@ -3,4 +3,4 @@ ruby '2.2.0'
 
 gem 'twitter_ebooks'
 gem 'rake'
-gem 'dotenv'
+gem 'dotenv', :groups => [:development]

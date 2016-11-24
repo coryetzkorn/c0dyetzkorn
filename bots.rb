@@ -1,6 +1,7 @@
 # This is an example bot definition with event handlers commented out
 # You can define and instantiate as many bots as you like
-require 'dotenv'  
+require 'dotenv'
+require 'twitter_ebooks'
 Dotenv.load(".env")
 
 class MyBot < Ebooks::Bot
@@ -10,8 +11,6 @@ class MyBot < Ebooks::Bot
     # Once you have consumer details, use "ebooks auth" for new access tokens
     self.consumer_key = ENV['TWITTER_CONSUMER_KEY'] # Your app consumer key
     self.consumer_secret = ENV['TWITTER_CONSUMER_SECRET'] # Your app consumer secret
-    self.access_token = ENV['TWITTER_ACCESS_TOKEN'] # Token connecting the app to this account
-    self.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET'] # Secret connecting the app to this account
 
     # Users to block instead of interacting with
     self.blacklist = []
@@ -37,8 +36,7 @@ end
 
 # Make a MyBot and attach it to an account
 MyBot.new("c0dyetzkorn") do |bot|
-  bot.consumer_key = ENV['TWITTER_CONSUMER_KEY'] # Your app consumer key
-  bot.consumer_secret = ENV['TWITTER_CONSUMER_SECRET'] # Your app consumer secret
   bot.access_token = ENV['TWITTER_ACCESS_TOKEN'] # Token connecting the app to this account
   bot.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET'] # Secret connecting the app to this account
+  bot.original = "coryetzkorn"
 end
