@@ -1,6 +1,5 @@
 # This is an example bot definition with event handlers commented out
 # You can define and instantiate as many bots as you like
-require 'dotenv'
 require 'twitter_ebooks'
 
 class MyBot < Ebooks::Bot
