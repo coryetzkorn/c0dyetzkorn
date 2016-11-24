@@ -36,5 +36,4 @@ end
 MyBot.new("c0dyetzkorn") do |bot|
   bot.access_token = ENV['TWITTER_ACCESS_TOKEN'] # Token connecting the app to this account
   bot.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET'] # Secret connecting the app to this account
-  bot.original = "coryetzkorn"
 end
