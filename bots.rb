@@ -22,7 +22,7 @@ class MyBot < Ebooks::Bot
 
   def on_startup
     @model ||= Ebooks::Model.load('model/coryetzkorn.model')
-    scheduler.every '1m' do
+    scheduler.every '5s' do
       tweet(@model.make_statement)
     end
     # # 80% chance to tweet every 2 hours
@@ -37,6 +37,8 @@ end
 
 # Make a MyBot and attach it to an account
 MyBot.new("c0dyetzkorn") do |bot|
+  bot.consumer_key = ENV['TWITTER_CONSUMER_KEY'] # Your app consumer key
+  bot.consumer_secret = ENV['TWITTER_CONSUMER_SECRET'] # Your app consumer secret
   bot.access_token = ENV['TWITTER_ACCESS_TOKEN'] # Token connecting the app to this account
   bot.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET'] # Secret connecting the app to this account
 end
