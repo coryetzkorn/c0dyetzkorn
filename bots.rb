@@ -2,7 +2,6 @@
 # You can define and instantiate as many bots as you like
 require 'dotenv'
 require 'twitter_ebooks'
-Dotenv.load(".env")
 
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
