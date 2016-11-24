@@ -2,9 +2,6 @@
 # You can define and instantiate as many bots as you like
 require 'twitter_ebooks'
 
-puts ENV['TWITTER_CONSUMER_KEY']
-puts ENV['TWITTER_CONSUMER_SECRET']
-
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   def configure
